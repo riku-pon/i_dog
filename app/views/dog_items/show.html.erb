@@ -1,0 +1,8 @@
+商品詳細
+<div>
+<%= @item.name %>
+<%= image_tag @item.image.variant(resize:'200x200') if @item.image.attached? %>
+<%= @item.content%>
+<%= @item.genre.name %>
+</div>
+<span><span>
