@@ -1,8 +1,56 @@
-商品詳細
+<p>商品詳細</p>
+<br>
 <div>
-<%= @item.name %>
-<%= image_tag @item.image.variant(resize:'200x200') if @item.image.attached? %>
-<%= @item.content%>
-<%= @item.genre.name %>
+  <div>
+    <%= @item.name %>
+  </div>
+  <div>
+    <%= image_tag @item.image.variant(resize:'200x200') if @item.image.attached? %>
+  </div>
+  <div>
+    <%= @item.content%>
+  </div>
+  <div>
+    <%= @item.genre.name %>
+  </div>
 </div>
-<span><span>
+
+<br>
+
+<%# ログインしていないと表示しない %>
+<p>レビューを投稿する</p>
+<%= form_with(model: [@item, @review], local: true) do |f| %>
+  <div>
+    <%= f.label '評価'%>
+    <%= f.collection_select(:evaluation_id, Evaluation.all, :id, :name, {}) %>
+  </div>
+  <div>
+    <%= f.label 'タイトル'%>
+    <%= f.text_field :title, placeholder: "タイトルを入力する" %>
+  </div>
+  <div>
+    <%= f.label 'レビュー'%>
+    <%= f.text_area :content, placeholder: "レビュー内容を入力する", maxlength:"1000" %>
+  </div>
+  <div>
+    <%= f.label '犬種'%>
+    <%= f.collection_select(:dog_breed_id, DogBreed.all, :id, :name, {}) %>
+  </div>
+  <%= f.submit "投稿する" %>
+<% end %>
+<%# ログインしていないと表示しない %>
+
+<br>
+
+<p>レビュー一覧</p>
+<% if @reviews %>
+  <% @reviews.each do |review| %>
+    <p>
+      <%= link_to review.user.name, "#" %>
+      <%= review.evaluation.name %>
+      <%= review.title %>
+      <%= review.content %>
+      <%= review.dog_breed.id %>
+    </p>
+  <% end %>
+<% end %>

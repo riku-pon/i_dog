@@ -1,0 +1,7 @@
+.item_lists {
+  display: flex;
+}
+
+.iteminner {
+  display: flex;
+}
