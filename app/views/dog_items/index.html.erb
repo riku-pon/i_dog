@@ -1,0 +1,25 @@
+<h1>商品一覧</h1>
+
+<div class="item_lists">
+  <%= render "layouts/side_bar" %>
+  <% @items.each do |item| %>
+    <div class="iteminner">
+      <div>
+        <%= link_to dog_item_path(item.id) do %>
+      </div>
+      <div>
+        <%= item.name %>
+      </div>
+      <div>
+        <%= image_tag item.image.variant(resize:'200x200') if item.image.attached? %>
+      </div>
+      <div>
+        <%= item.content %>
+      </div>
+      <div>
+        <%= item.genre.name %>
+      </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
