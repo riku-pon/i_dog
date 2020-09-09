@@ -2,24 +2,13 @@
   <%# <%= "検索フォーム" %>
 </span>
 
-<% if user_signed_in?%>
-  <h2>
-  <span><%= current_user.name %></span>
-  </h2>
-  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-<% else %>
-  <h2>ログインしていません</h2>
-  <%= link_to "新規登録", new_user_registration_path %>
-  <%= link_to "ログイン", new_user_session_path %>
-<% end %>
-<%= link_to "投稿する", new_item_path %>
 <div class="main">
   <div class="main_content">
     <div class="jp_dogs">
       <p>日本犬</p>
       <div class="small_dog">小型
         <ul>
-          <li><%= link_to "柴犬", "#", class:"jp_dog" %></li>
+          <li><%= link_to "柴犬", dog_items_path, class:"jp_dog" %></li>
         </ul>
       </div>
       <br>

@@ -16,29 +16,29 @@
 </div>
 
 <br>
+
+<%# ログインしていないと表示しない %>
 <p>レビューを投稿する</p>
-<% if user_signed_in?%>
-  <%= form_with(model: [@item, @review], local: true) do |f| %>
-    <div>
-      <%= f.label '評価'%>
-      <%= f.collection_select(:evaluation_id, Evaluation.all, :id, :name, {}) %>
-    </div>
-    <div>
-      <%= f.label 'タイトル'%>
-      <%= f.text_field :title, placeholder: "タイトルを入力する" %>
-    </div>
-    <div>
-      <%= f.label 'レビュー'%>
-      <%= f.text_area :content, placeholder: "レビュー内容を入力する", maxlength:"1000" %>
-    </div>
-    <div>
-      <%= f.label '犬種'%>
-      <%= f.collection_select(:dog_breed_id, DogBreed.all, :id, :name, {}) %>
-    </div>
-  <% end %>
+<%= form_with(model: [@item, @review], local: true) do |f| %>
+  <div>
+    <%= f.label '評価'%>
+    <%= f.collection_select(:evaluation_id, Evaluation.all, :id, :name, {}) %>
+  </div>
+  <div>
+    <%= f.label 'タイトル'%>
+    <%= f.text_field :title, placeholder: "タイトルを入力する" %>
+  </div>
+  <div>
+    <%= f.label 'レビュー'%>
+    <%= f.text_area :content, placeholder: "レビュー内容を入力する", maxlength:"1000" %>
+  </div>
+  <div>
+    <%= f.label '犬種'%>
+    <%= f.collection_select(:dog_breed_id, DogBreed.all, :id, :name, {}) %>
+  </div>
   <%= f.submit "投稿する" %>
 <% end %>
-
+<%# ログインしていないと表示しない %>
 
 <br>
 
