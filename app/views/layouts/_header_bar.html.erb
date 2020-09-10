@@ -1,0 +1,14 @@
+<div class="header_bar">
+  <div class="title"><b><%= link_to "Idog", root_path, class:"title_logo" %></b></div>
+  <div class="account_heager">
+    <% if user_signed_in?%>
+      <h2>
+      <span><%= current_user.name %></span>
+      </h2>
+      <span><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></span>
+    <% else %>
+      <span><%= link_to "新規登録", new_user_registration_path %></span>
+      <span><%= link_to "ログイン", new_user_session_path %></span>
+    <% end %>
+  </div>
+</div>

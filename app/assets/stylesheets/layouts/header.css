@@ -1,0 +1,22 @@
+.header_bar {
+  height: 120px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: wheat;
+}
+
+.title {
+  font-size: 60px;
+  padding: 10px 40px 30px 40px;
+}
+
+.title_logo {
+  text-decoration: none;
+  color: black;
+}
+
+.account_heager {
+  display: flex;
+  justify-content: space-around;
+}
