@@ -1,0 +1,129 @@
+.dog_items_show_main {
+  background-color: #FFFAF0;
+  width: 100vw;
+}
+
+.dog_items_show_title {
+  font-size: 40px;
+  text-align: center;
+  border-bottom: solid 1px #FF9872;
+}
+
+.dog_items_show_title1 {
+  font-size: 40px;
+  text-align: center;
+  border-bottom: solid 1px #FF9872;
+  margin-top: 10px;
+}
+
+.dog_items_show_title2 {
+  font-size: 40px;
+  text-align: center;
+  border-bottom: solid 1px #FF9872;
+  margin-top: 50px;
+}
+
+.dog_item_show_main {
+  display: flex;
+  padding: 20px 0px;
+}
+
+.dog_items_show_info {
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  width: 100vw;
+}
+
+.under {
+  border-bottom: coral 3px solid;
+  font-size: 20px;
+}
+
+.dog_items_show_info1 {
+  margin: 0px 0px 5px 10px;
+}
+
+.dog_items_show_info2 {
+  margin: 5px 0px 5px 10px;
+}
+
+.dog_items_show_info3 {
+  margin: 5px 0px 0px 10px;
+}
+
+.dog_items_show_posts {
+  display: flex;
+  justify-content: center;
+}
+
+.dog_items_show_item_select::-ms-expand {
+  display: none;
+}
+
+.dog_items_show_item_select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 5px 30px 5px 10px;
+  font-size: 16px;
+  line-height: 1.1em;
+  border: 2px solid #ddd;
+  background-image: url(../images/icon_arrow.png);
+  background-repeat: no-repeat;
+  background-size: 12px 10px;
+  background-position: right 10px center;
+}
+
+.dog_items_show_dog_select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 5px 66px 5px 10px;
+  font-size: 16px;
+  line-height: 1.1em;
+  border: 2px solid #ddd;
+  background-image: url(../images/icon_arrow.png);
+  background-repeat: no-repeat;
+  background-size: 12px 10px;
+  background-position: right 10px center;
+}
+
+.dog_items_show_item_title {
+  width: 100%;
+  padding: 5px 15px;
+  font-size: 16px;
+  border-radius: 3px;
+  border: 2px solid #ddd;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.dog_items_show_item_content {
+  width: 700px;
+  height: 300px;
+  padding: 5px 15px;
+  font-size: 16px;
+  border-radius: 3px;
+  border: 2px solid #ddd;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.submit_center {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dog_items_show_action {
+  background-color: white;
+  border: solid 3px #ddd;
+  padding: 10px 50px;
+}
+
+.review_mes {
+  margin-top: 20px;
+  font-size: 20px;
+  text-align: center;
+  color: red;
+}

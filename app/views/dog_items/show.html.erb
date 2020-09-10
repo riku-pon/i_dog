@@ -1,56 +1,69 @@
-<p>商品詳細</p>
-<br>
-<div>
-  <div>
-    <%= @item.name %>
+<div class="dog_items_show_main">
+  <p class="dog_items_show_title">商品詳細</p>
+  <br>
+  <div class="dog_item_show_main">
+    <div>
+      <%= image_tag @item.image.variant(resize:'400x400') if @item.image.attached? %>
+    </div>
+    <div class="dog_items_show_info">
+      <div class="dog_items_show_info1">
+        <p><span class="under"><b>商品名</b></span></p>
+        <%= @item.name %>
+      </div>
+      <div class="dog_items_show_info2">
+        <p><span class="under"><b>商品のジャンル</b></span></p>
+        <%= @item.genre.name %>
+      </div>
+      <div class="dog_items_show_info3">
+        <p><span class="under"><b>商品の説明</b></span></p>
+        <%= @item.content%>
+      </div>
+    </div>
   </div>
-  <div>
-    <%= image_tag @item.image.variant(resize:'200x200') if @item.image.attached? %>
-  </div>
-  <div>
-    <%= @item.content%>
-  </div>
-  <div>
-    <%= @item.genre.name %>
-  </div>
-</div>
 
-<br>
+  <br>
 
-<%# ログインしていないと表示しない %>
-<p>レビューを投稿する</p>
-<%= form_with(model: [@item, @review], local: true) do |f| %>
-  <div>
-    <%= f.label '評価'%>
-    <%= f.collection_select(:evaluation_id, Evaluation.all, :id, :name, {}) %>
-  </div>
-  <div>
-    <%= f.label 'タイトル'%>
-    <%= f.text_field :title, placeholder: "タイトルを入力する" %>
-  </div>
-  <div>
-    <%= f.label 'レビュー'%>
-    <%= f.text_area :content, placeholder: "レビュー内容を入力する", maxlength:"1000" %>
-  </div>
-  <div>
-    <%= f.label '犬種'%>
-    <%= f.collection_select(:dog_breed_id, DogBreed.all, :id, :name, {}) %>
-  </div>
-  <%= f.submit "投稿する" %>
-<% end %>
-<%# ログインしていないと表示しない %>
-
-<br>
-
-<p>レビュー一覧</p>
-<% if @reviews %>
-  <% @reviews.each do |review| %>
-    <p>
-      <%= link_to review.user.name, "#" %>
-      <%= review.evaluation.name %>
-      <%= review.title %>
-      <%= review.content %>
-      <%= review.dog_breed.id %>
-    </p>
+  <p class="dog_items_show_title1">レビューを投稿する</p>
+  <% if user_signed_in?%>
+    <div class="dog_items_show_posts">
+      <%= form_with(model: [@item, @review], local: true) do |f| %>
+        <div>
+          <b class="under"><%= f.label '評価'%></b>
+          <p><%= f.collection_select(:evaluation_id, Evaluation.all, :id, :name, {}, { class:"dog_items_show_item_select" }) %></p>
+        </div>
+        <div>
+          <b class="under"><%= f.label '犬種'%></b>
+          <p><%= f.collection_select(:dog_breed_id, DogBreed.all, :id, :name, {}, { class:"dog_items_show_dog_select" }) %></p>
+        </div>
+        <div>
+          <b class="under"><%= f.label 'タイトル'%></b>
+          <p><%= f.text_field :title, placeholder: "タイトルを入力する", class:"dog_items_show_item_title" %></p>
+        </div>
+        <div>
+          <b class="under"><%= f.label 'レビュー'%></b>
+          <p><%= f.text_area :content, placeholder: "レビュー内容を入力する", maxlength:"1000", class:"dog_items_show_item_content" %></p>
+        </div>
+        <div class="submit_center">
+          <%= f.submit "投稿する",  class:"dog_items_show_action" %>
+        </div>
+      <% end %>
+    </div>
+  <% else %>
+    <p class="review_mes">レビューの投稿をするにはログインしている必要があります</p>
   <% end %>
-<% end %>
+
+  <br>
+
+  <p class="dog_items_show_title2">レビュー一覧</p>
+  <% if @reviews %>
+    <% @reviews.each do |review| %>
+      <ul>
+        <li><%= link_to review.user.name, "#", class:"" %></li>
+        <li><%= review.evaluation.name %></li>
+        <li><%= review.title %></li>
+        <li><%= review.content %></li>
+        <li><%= review.dog_breed.name %></li>
+      <ul>
+    <% end %>
+  <% end %>
+</div>
