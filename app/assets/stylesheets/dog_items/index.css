@@ -1,0 +1,47 @@
+.dog_items_main {
+  background-color: #FFFAF0;
+  min-width: 100vw;
+}
+
+.dog_item_title {
+  text-align: center;
+  font-size: 45px;
+  padding: 30px;
+}
+
+.item_lists {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+}
+
+.iteminner {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  display: inline-block;
+}
+
+.iteminner1 {
+  text-decoration: none;
+  color: black;
+}
+
+.iteminner2 {
+  border: solid 1px #A0522D;
+  margin: 1px;
+  padding: 10px 20px;
+}
+
+.iteminner3 {
+  border: solid 1px #A0522D;
+  margin: 1px;
+  padding: 10px 20px;
+  background-color: white;
+}
+
+.dog_items_footer {
+  background-color: wheat;
+  height: 150px;
+}

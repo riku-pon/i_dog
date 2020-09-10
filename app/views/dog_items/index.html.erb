@@ -1,25 +1,26 @@
-<h1>商品一覧</h1>
+<div class="dog_items_main">
+  <p class="dog_item_title">商品一覧</p>
 
-<div class="item_lists">
-  <%= render "layouts/side_bar" %>
-  <% @items.each do |item| %>
-    <div class="iteminner">
-      <div>
-        <%= link_to dog_item_path(item.id) do %>
-      </div>
-      <div>
-        <%= item.name %>
-      </div>
-      <div>
-        <%= image_tag item.image.variant(resize:'200x200') if item.image.attached? %>
-      </div>
-      <div>
-        <%= item.content %>
-      </div>
-      <div>
-        <%= item.genre.name %>
-      </div>
+  <div class="item_list">
+    <div class="item_lists">
+      <% @items.each do |item| %>
+        <div class="iteminner">
+          <%= link_to dog_item_path(item.id), class:"iteminner1" do %>
+            <div class="iteminner2">
+              <%= item.name %>
+            </div>
+            <div class="iteminner3">
+              <%= image_tag item.image.variant(resize:'200x200') if item.image.attached? %>
+            </div>
+            <div class="iteminner2">
+              <%= item.genre.name %>
+            </div>
+          <% end %>
+        </div>
       <% end %>
     </div>
-  <% end %>
+  </div>
+  <div class="dog_items_footer">
+  フッター
+  </div>
 </div>

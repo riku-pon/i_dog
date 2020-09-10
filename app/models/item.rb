@@ -1,6 +1,7 @@
 class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
-  has_many :user
+  belongs_to :user
+  has_many :reviews
   belongs_to_active_hash :genre
   has_one_attached :image
 
