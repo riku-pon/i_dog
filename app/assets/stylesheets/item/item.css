@@ -1,0 +1,92 @@
+.main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+.item_view {
+  position: absolute;
+  left: 15vw;
+  top: 9vh;
+  box-shadow: 0px 0px 0px 10px peachpuff;
+  border: dashed 4px white;
+  border-radius: 15px;
+  font-size: 30px;
+  padding: 20px 50vh;
+  background-color: peachpuff;
+}
+
+.main_content {
+  width: 100vw;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+.jp_dogs {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px;
+  background-color: #FFFAF0;
+}
+
+.jp_dogs li {
+  float: left;
+  padding: 0px 0px 0px 10px;
+}
+
+.jp_dogs p {
+  margin-left: 10px;
+  font-size: 30px;
+}
+
+.jp_dog {
+  width: 100px;
+  max-width: 340px;
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: black;
+  background-color: peachpuff;
+}
+
+/* 体格別 */
+.small_dog {
+  margin: 10px 0px 0px 10px;
+}
+
+.medium_dog {
+  margin: 10px 0px 0px 10px;
+}
+
+.large_dog {
+  margin: 10px 0px 0px 10px;
+}
+/* 体格別 */
+
+/* 商品カテゴリー */
+.dog_items {
+  background-color: #FFFAF0;
+  padding: 10px 0px;
+}
+
+.dog_items p {
+  margin: 20px 0px 0px 10px;
+  font-size: 30px;
+}
+
+.item_list1 {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.dog_item {
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 7px;
+  color: black;
+}
+/* 商品カテゴリー */

@@ -1,0 +1,35 @@
+.sessions_main {
+  background-color: #FFFAF0;
+}
+
+.sessions_title {
+  text-align: center;
+  font-size: 36px;
+  padding-top: 30px;
+}
+
+.sessions_text_field {
+  height: 500px;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 0px;
+  margin: 0px auto;
+}
+
+.sessions_field {
+  padding: 10px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.session_actions {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.sessions_footer {
+  background-color: wheat;
+  height: 200px;
+}

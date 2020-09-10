@@ -1,0 +1,16 @@
+<h1>新規商品登録ページ</h1>
+<%= form_with model: @item, local: true do |f| %>
+  <%= f.file_field :image, id:"item-image" %>
+  <div>
+    <%= f.label '商品名'%>
+    <%= f.text_field :name, placeholder:"商品名を入力" %>
+  </div>
+  <div>
+    <%= f.label '商品の説明' %>
+    <%= f.text_area :content, placeholder:"商品についての説明を入力してください", maxlength:"1000" %>
+  </div>
+  <div>
+    <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}) %>
+  </div>
+    <%= f.submit '登録する' %>
+<% end %>
