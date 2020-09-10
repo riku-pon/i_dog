@@ -1,17 +1,26 @@
-商品一覧
-<div class="item_list">
-  <div class="item_lists">
-    <% @items.each do |item| %>
-      <div class="iteminner">
-        <ul>
-          <%= link_to dog_item_path(item.id) do %>
-          <li><%= item.name %></li>
-          <li><%= image_tag item.image.variant(resize:'200x200') if item.image.attached? %></li>
-          <li><%= item.content %></li>
-          <li><%= item.genre.name %></li>
+<div class="dog_items_main">
+  <p class="dog_item_title">商品一覧</p>
+
+  <div class="item_list">
+    <div class="item_lists">
+      <% @items.each do |item| %>
+        <div class="iteminner">
+          <%= link_to dog_item_path(item.id), class:"iteminner1" do %>
+            <div class="iteminner2">
+              <%= item.name %>
+            </div>
+            <div class="iteminner3">
+              <%= image_tag item.image.variant(resize:'200x200') if item.image.attached? %>
+            </div>
+            <div class="iteminner2">
+              <%= item.genre.name %>
+            </div>
           <% end %>
-        </ul>
-      </div>
-    <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="dog_items_footer">
+  フッター
   </div>
 </div>
