@@ -55,15 +55,27 @@
   <br>
 
   <p class="dog_items_show_title2">レビュー一覧</p>
-  <% if @reviews %>
-    <% @reviews.each do |review| %>
-      <ul>
-        <li><%= link_to review.user.name, "#", class:"" %></li>
-        <li><%= review.evaluation.name %></li>
-        <li><%= review.title %></li>
-        <li><%= review.content %></li>
-        <li><%= review.dog_breed.name %></li>
-      <ul>
+  <div class="reviews_main">
+    <% if @reviews %>
+      <% @reviews.each do |review| %>
+      <div class="review_date">
+        <div class="review_post_name">
+          <span>投稿者</span>
+          <p><%= link_to review.user.name, "#", class:"review_user_name" %></p>
+        </div>
+        <div class="review_keepdog_name">
+          <span>飼っている犬種</span>
+          <p><%= review.dog_breed.name %></p>
+        </div>
+        <div class="dog_evaluation_name">
+          <span><%= review.evaluation.name %></span>
+          <p><%= review.title %></p>
+        </div>
+        <div>
+          <p class="review_content"><%= review.content %></p>
+        </div>
+      </div>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
 </div>

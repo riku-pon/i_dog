@@ -3,24 +3,11 @@
   width: 100vw;
 }
 
+/* 商品詳細 */
 .dog_items_show_title {
   font-size: 40px;
   text-align: center;
-  border-bottom: solid 1px #FF9872;
-}
-
-.dog_items_show_title1 {
-  font-size: 40px;
-  text-align: center;
-  border-bottom: solid 1px #FF9872;
-  margin-top: 10px;
-}
-
-.dog_items_show_title2 {
-  font-size: 40px;
-  text-align: center;
-  border-bottom: solid 1px #FF9872;
-  margin-top: 50px;
+  border-bottom: solid 3px #FF9872;
 }
 
 .dog_item_show_main {
@@ -35,11 +22,6 @@
   width: 100vw;
 }
 
-.under {
-  border-bottom: coral 3px solid;
-  font-size: 20px;
-}
-
 .dog_items_show_info1 {
   margin: 0px 0px 5px 10px;
 }
@@ -50,6 +32,22 @@
 
 .dog_items_show_info3 {
   margin: 5px 0px 0px 10px;
+}
+/* 商品詳細 */
+
+/* 共通部分 */
+.under {
+  border-bottom: coral 3px solid;
+  font-size: 20px;
+}
+/* 共通部分 */
+
+/* レビュー投稿フォーム */
+.dog_items_show_title1 {
+  font-size: 40px;
+  text-align: center;
+  border-bottom: solid 3px #FF9872;
+  margin-top: 10px;
 }
 
 .dog_items_show_posts {
@@ -127,3 +125,90 @@
   text-align: center;
   color: red;
 }
+/* レビュー投稿フォーム */
+
+/* レビュー一覧 */
+.dog_items_show_title2 {
+  font-size: 40px;
+  text-align: center;
+  border-bottom: solid 3px #FF9872;
+  margin: 50px 0px 10px;
+}
+
+.reviews_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review_date {
+  width: 500px;
+  margin: 20px 0px 20px 0px;
+}
+
+.review_post_name {
+  display: flex;
+  width: 500px;
+  height: 24px;
+  position: relative;
+}
+
+.review_post_name span {
+  position: absolute;
+  left: 175px;
+}
+
+.review_post_name p {
+  position: absolute;
+  right: 175px;
+}
+
+.review_user_name {
+  text-decoration: none;
+  color: #808080;
+}
+
+.review_keepdog_name {
+  display: flex;
+  width: 500px;
+  height: 24px;
+  position: relative;
+}
+
+.review_keepdog_name span {
+  position: absolute;
+  left: 112px;
+}
+
+.review_keepdog_name p {
+  position: absolute;
+  right: 175px;
+  width: 80px;
+  text-align-last: center;
+}
+
+.dog_evaluation_name {
+  display: flex;
+  width: 500px;
+  height: 24px;
+  position: relative;
+}
+
+.dog_evaluation_name span {
+  position: absolute;
+  left: 122px;
+}
+
+.dog_evaluation_name p {
+  position: absolute;
+  right: 175px;
+}
+
+.review_content {
+  background-color: white;
+  border: solid 2px #ddd;
+  padding: 5px 10px;
+  width: 500px;
+  height: 200px;
+}
+/* レビュー一覧 */
