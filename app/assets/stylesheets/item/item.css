@@ -90,3 +90,7 @@ h1 {
   color: black;
 }
 /* 商品カテゴリー */
+
+li {
+  list-style: none;
+}
