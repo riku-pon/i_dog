@@ -113,9 +113,9 @@
 ![ER図](https://i.gyazo.com/e0be6992f84ac3a0170ffc12ac63a911.png)
 
 # ローカルでの動作方法
- git clone https://github.com/riku-pon/i_dog
- bundle install
- rails db:create
- rails db:migrate
- rails s
+ git clone https://github.com/riku-pon/i_dog<br>
+ bundle install<br>
+ rails db:create<br>
+ rails db:migrate<br>
+ rails s<br>
  http://localhost:3000
