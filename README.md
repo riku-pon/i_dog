@@ -110,7 +110,7 @@
 - belongs_to :item
 
 # ER図
- - https://i.gyazo.com/e0be6992f84ac3a0170ffc12ac63a911.png
+ - ![ER図](https://i.gyazo.com/e0be6992f84ac3a0170ffc12ac63a911.png)
 
 # ローカルでの動作方法
  git clone [https://github.com/riku-pon/i_dog]
