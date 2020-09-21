@@ -18,6 +18,7 @@
 
 .main_content {
   width: 100vw;
+  height: 100vh;
 }
 
 h1 {
@@ -51,6 +52,10 @@ h1 {
   letter-spacing: 0.1em;
   color: black;
   background-color: peachpuff;
+}
+
+li {
+  list-style: none;
 }
 
 /* 体格別 */
@@ -91,6 +96,22 @@ h1 {
 }
 /* 商品カテゴリー */
 
-li {
-  list-style: none;
+/* フッター */
+.footer_bar {
+  height: 150px;
+  background-color: wheat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
+
+.item_post {
+  color: black;
+  text-decoration: none;
+}
+
+.footer_logo {
+  margin-top: 30px;
+}
+/* フッター */
