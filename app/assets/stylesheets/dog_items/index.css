@@ -9,6 +9,10 @@
   padding: 30px;
 }
 
+.item_list {
+  height: 100vh;
+}
+
 .item_lists {
   display: flex;
   justify-content: space-evenly;
@@ -41,7 +45,11 @@
   background-color: white;
 }
 
-.dog_items_footer {
+/* フッター */
+.footer_logo1 {
   background-color: wheat;
   height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
