@@ -1,17 +1,23 @@
-<h1>新規商品登録ページ</h1>
-<%= form_with model: @item, local: true do |f| %>
-  <%= f.file_field :image, id:"item-image" %>
-  <div>
-    <%= f.label '商品名'%>
-    <%= f.text_field :name, placeholder:"商品名を入力" %>
+<div class="items-new-main">
+  <span class="registrations-items">新規商品登録</span>
+  <div class="items-new-text">
+    <%= form_with model: @item, local: true do |f| %>
+      <%= f.file_field :image, id:"item-image", class:"items-image" %>
+      <div class="items1">
+        <p><%= f.label '商品名', class:"items-title" %></p>
+        <%= f.text_field :name, placeholder:"商品名を入力", class:"items-name" %>
+      </div>
+      <div class="items2">
+        <p><%= f.label '商品の説明', class:"items-title" %></p>
+        <%= f.text_area :content, placeholder:"商品についての説明を入力してください", maxlength:"1000", class:"items-content" %>
+      </div>
+      <div class="items3">
+        <p><%= f.label '商品のジャンルを選択してください', class:"items-title" %></p>
+        <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, { class:"items-genre-select" }) %>
+      </div>
+      <div class="items-submit">
+        <%= f.submit '登録する', class:"items-submit-action" %>
+      </div>
+    <% end %>
   </div>
-  <div>
-    <%= f.label '商品の説明' %>
-    <%= f.text_area :content, placeholder:"商品についての説明を入力してください", maxlength:"1000" %>
-  </div>
-  <div>
-    <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}) %>
-  </div>
-    <%= f.submit '登録する' %>
-<% end %>
-footer_logo1
+</div>
